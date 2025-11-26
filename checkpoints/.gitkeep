@@ -1,0 +1,2 @@
+# Placeholder file to keep checkpoints directory in Git
+# Actual checkpoint files (.pth, .pkl) are excluded via .gitignore

@@ -170,8 +170,8 @@ def main():
             for batch in train_loader:
                 inputs = batch[0]
                 
-                # Forward pass
-                reconstructed = encoder(inputs)
+                # Forward pass (returns encoded, decoded)
+                _, reconstructed = encoder(inputs)
                 loss = criterion(reconstructed, inputs)
                 
                 # Backward pass

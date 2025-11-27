@@ -64,3 +64,15 @@ venv.bak/
 # Temporary files
 *.tmp
 *.bak
+
+# Generated results and debug files
+evaluation_results.csv
+*.csv
+debug_*.py
+inspect_*.py
+test_saved_models.py
+
+# Old documentation (keep only latest)
+COLAB_COMPLETE_GUIDE.md
+NOTEBOOK_UPDATE_NOTES.md
+EEG_to_Text_Colab_FIXED*.ipynb

@@ -158,7 +158,8 @@ def main():
     print("-" * 70)
     
     # Process in smaller batches to avoid memory issues
-    batch_size = 50  # Reduced from 500 to avoid memory issues
+    # Batch size reduced from 500 to 50 to prevent memory errors
+    batch_size = 50
     augmented_raw_list = []
     augmented_text_list = []
     target_shape = (config.CNN_INPUT_CHANNELS, config.SEQUENCE_LENGTH)

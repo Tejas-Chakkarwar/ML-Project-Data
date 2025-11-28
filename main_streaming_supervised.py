@@ -4,6 +4,7 @@ import numpy as np
 import torch
 import argparse
 import time
+import random
 from torch.utils.data import DataLoader as TorchDataLoader
 from torch.utils.data import TensorDataset
 
@@ -55,9 +56,21 @@ def main():
     args = parse_args()
     start_time = time.time()
 
+    # Set seeds for reproducibility
+    random.seed(42)
+    np.random.seed(42)
+    torch.manual_seed(42)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(42)
+
     print("=" * 70)
-    print("EEG-TO-TEXT HMM PIPELINE (SUPERVISED STREAMING VERSION)")
+    print("EEG-TO-TEXT HMM PIPELINE (SUPERVISED STREAMING VERSION - v2)")
     print("=" * 70)
+    print()
+    print("🔧 Fixes applied:")
+    print("  ✓ Chunk shuffling between epochs")
+    print("  ✓ Adaptive learning rate (ReduceLROnPlateau)")
+    print("  ✓ Lower initial LR for stability")
     print()
 
     data_dir = os.path.join(os.path.dirname(__file__), config.DATA_DIR)
@@ -142,10 +155,11 @@ def main():
     )
     encoder.to(config.CNN_DEVICE)
 
-    # Setup optimizer
-    optimizer = torch.optim.Adam(encoder.parameters(), lr=args.cnn_lr, weight_decay=1e-4)
+    # Setup optimizer with lower learning rate for stability
+    optimizer = torch.optim.Adam(encoder.parameters(), lr=args.cnn_lr * 0.5, weight_decay=1e-4)
     criterion = torch.nn.CrossEntropyLoss()  # CHANGED: Classification loss instead of MSE
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.cnn_epochs)
+    # Use ReduceLROnPlateau instead of CosineAnnealing for better stability
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=1, verbose=True)
 
     target_shape = (config.CNN_INPUT_CHANNELS, config.SEQUENCE_LENGTH)
 
@@ -159,9 +173,13 @@ def main():
         total = 0
         num_batches = 0
 
+        # CRITICAL FIX: Shuffle training files before each epoch
+        shuffled_train_files = train_files_list.copy()
+        random.shuffle(shuffled_train_files)
+
         # Process in chunks
-        for chunk_idx in range(0, len(train_files_list), args.chunk_size):
-            chunk_files = train_files_list[chunk_idx:chunk_idx + args.chunk_size]
+        for chunk_idx in range(0, len(shuffled_train_files), args.chunk_size):
+            chunk_files = shuffled_train_files[chunk_idx:chunk_idx + args.chunk_size]
 
             # Load this chunk
             chunk_data = []
@@ -208,13 +226,14 @@ def main():
             del X_chunk, y_chunk, dataset, train_loader, chunk_data, chunk_labels
             torch.cuda.empty_cache()
 
-            print(f"  Chunk {chunk_idx//args.chunk_size + 1}/{(len(train_files_list)-1)//args.chunk_size + 1} processed")
-
-        scheduler.step()
+            print(f"  Chunk {chunk_idx//args.chunk_size + 1}/{(len(shuffled_train_files)-1)//args.chunk_size + 1} processed")
 
         avg_loss = epoch_loss / max(num_batches, 1)
         train_acc = 100. * correct / total if total > 0 else 0
         print(f"Epoch {epoch+1} - Avg Loss: {avg_loss:.4f}, Train Acc: {train_acc:.2f}%")
+
+        # Update learning rate based on accuracy
+        scheduler.step(train_acc)
 
     # Save CNN
     os.makedirs(config.CHECKPOINT_DIR, exist_ok=True)

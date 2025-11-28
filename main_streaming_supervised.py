@@ -159,7 +159,7 @@ def main():
     optimizer = torch.optim.Adam(encoder.parameters(), lr=args.cnn_lr * 0.5, weight_decay=1e-4)
     criterion = torch.nn.CrossEntropyLoss()  # CHANGED: Classification loss instead of MSE
     # Use ReduceLROnPlateau instead of CosineAnnealing for better stability
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=1, verbose=True)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=1)
 
     target_shape = (config.CNN_INPUT_CHANNELS, config.SEQUENCE_LENGTH)
 

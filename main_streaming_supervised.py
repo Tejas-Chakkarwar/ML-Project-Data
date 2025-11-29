@@ -159,7 +159,7 @@ def main():
     optimizer = torch.optim.Adam(encoder.parameters(), lr=args.cnn_lr * 0.5, weight_decay=1e-4)
     criterion = torch.nn.CrossEntropyLoss()  # CHANGED: Classification loss instead of MSE
     # Use ReduceLROnPlateau instead of CosineAnnealing for better stability
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=1)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=3, verbose=False)
 
     target_shape = (config.CNN_INPUT_CHANNELS, config.SEQUENCE_LENGTH)
 
@@ -230,7 +230,8 @@ def main():
 
         avg_loss = epoch_loss / max(num_batches, 1)
         train_acc = 100. * correct / total if total > 0 else 0
-        print(f"Epoch {epoch+1} - Avg Loss: {avg_loss:.4f}, Train Acc: {train_acc:.2f}%")
+        current_lr = optimizer.param_groups[0]['lr']
+        print(f"Epoch {epoch+1} - Avg Loss: {avg_loss:.4f}, Train Acc: {train_acc:.2f}%, LR: {current_lr:.6f}")
 
         # Update learning rate based on accuracy
         scheduler.step(train_acc)

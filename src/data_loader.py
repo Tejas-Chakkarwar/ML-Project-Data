@@ -78,12 +78,22 @@ class DataLoader:
         """
         Generates augmented versions of the data with enhanced techniques.
         data: (105, T)
+        num_augmentations: TOTAL number of samples to return (including original)
         Returns: List of augmented data arrays (including original).
+
+        Example:
+            num_augmentations=1 → [original] (1 sample, no augmentation)
+            num_augmentations=2 → [original, aug1] (2 samples)
+            num_augmentations=5 → [original, aug1, aug2, aug3, aug4] (5 samples)
         """
-        augmented = [data]
+        if num_augmentations < 1:
+            num_augmentations = 1
+
+        augmented = [data]  # Always include original
         n_channels, n_time = data.shape
 
-        for _ in range(num_augmentations):
+        # Generate (num_augmentations - 1) augmented versions
+        for _ in range(num_augmentations - 1):
             # Copy data
             aug = data.copy()
 

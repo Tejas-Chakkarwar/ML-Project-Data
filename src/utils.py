@@ -459,3 +459,20 @@ def calculate_word_level_metrics(true_labels, pred_labels):
     }
 
     return metrics
+
+
+# Alias for backward compatibility with Seq2Seq code
+def calculate_wer(true_sentence, pred_sentence):
+    """
+    Alias for calculate_word_error_rate.
+    Returns only the WER value (not the operations dict).
+
+    Args:
+        true_sentence: Ground truth sentence (string)
+        pred_sentence: Predicted sentence (string)
+
+    Returns:
+        wer: Word Error Rate value
+    """
+    wer, _ = calculate_word_error_rate(true_sentence, pred_sentence)
+    return wer

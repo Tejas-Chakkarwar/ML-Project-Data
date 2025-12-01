@@ -1,0 +1,104 @@
+================================================================================
+TOP 10 CHALLENGING CASES (Error Analysis)
+================================================================================
+
+[1] EXAMPLE 1: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_4999.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[2] EXAMPLE 2: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5270.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[3] EXAMPLE 3: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5348.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[4] EXAMPLE 4: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5619.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[5] EXAMPLE 5: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5697.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[6] EXAMPLE 6: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5968.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[7] EXAMPLE 7: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_6046.csv
+True Sentence: In 1964 she went to Reprise again, shifting the next year to Dot Records.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 7.1% (1/14)
+Word Error Rate: 92.9%
+Errors: 10 substitutions, 3 deletions, 0 insertions
+Wrong Words: "in" → "however", "1964" → "the", "she" → "us", "went" → "navy", "to" → "accepted" (+5 more)
+
+[8] EXAMPLE 8: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5199.csv
+True Sentence: During this period, he published Profiles in Courage, highlighting eight instances in which U.S. Senators risked their careers by standing by their personal beliefs.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 4.2% (1/24)
+Word Error Rate: 95.8%
+Errors: 10 substitutions, 13 deletions, 0 insertions
+Wrong Words: "during" → "however", "this" → "the", "period" → "us", "he" → "navy", "published" → "accepted" (+5 more)
+
+[9] EXAMPLE 9: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5426.csv
+True Sentence: During this period, he published Profiles in Courage, highlighting eight instances in which U.S. Senators risked their careers by standing by their personal beliefs.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 4.2% (1/24)
+Word Error Rate: 95.8%
+Errors: 10 substitutions, 13 deletions, 0 insertions
+Wrong Words: "during" → "however", "this" → "the", "period" → "us", "he" → "navy", "published" → "accepted" (+5 more)
+
+[10] EXAMPLE 10: ✗ INCORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5548.csv
+True Sentence: During this period, he published Profiles in Courage, highlighting eight instances in which U.S. Senators risked their careers by standing by their personal beliefs.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 4.2% (1/24)
+Word Error Rate: 95.8%
+Errors: 10 substitutions, 13 deletions, 0 insertions
+Wrong Words: "during" → "however", "this" → "the", "period" → "us", "he" → "navy", "published" → "accepted" (+5 more)
+

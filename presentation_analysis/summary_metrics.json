@@ -1,0 +1,18 @@
+{
+  "Dataset": {
+    "Test Samples": 36,
+    "Unique Classes": 5,
+    "Total Words Analyzed": 599
+  },
+  "Model Performance": {
+    "Classification Accuracy": "22.22%",
+    "Word-Level Accuracy": "16.53%",
+    "Word Error Rate": "74.77%",
+    "Correct Predictions": "8/36"
+  },
+  "Improvement vs Random": {
+    "Random Baseline": "20.00%",
+    "Our Model": "22.22%",
+    "Improvement Factor": "1.1x"
+  }
+}

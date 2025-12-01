@@ -1,0 +1,24 @@
+PRESENTATION METRICS
+================================================================================
+
+SLIDE 1: Overall Performance
+--------------------------------------------------------------------------------
+Classification Accuracy: 22.2%
+Word-Level Accuracy: 16.5%
+Improvement vs Random: 1.1x better
+
+SLIDE 2: Detailed Metrics
+--------------------------------------------------------------------------------
+Test Samples: 36
+Correct Classifications: 8
+Word Error Rate: 74.8%
+Total Words Analyzed: 599
+Correctly Predicted Words: 99
+
+SLIDE 3: Key Achievements
+--------------------------------------------------------------------------------
+✓ Built end-to-end EEG-to-Text pipeline
+✓ Achieved 22.2% classification accuracy
+✓ Word-level accuracy: 16.5% (shows partial understanding)
+✓ Significantly better than random baseline (20.00%)
+

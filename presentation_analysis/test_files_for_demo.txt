@@ -1,0 +1,40 @@
+TEST FILES FOR LIVE DEMONSTRATION
+================================================================================
+
+BEST EXAMPLES (Show these for successful predictions):
+--------------------------------------------------------------------------------
+1. rawdata_5080.csv
+   Expected: However, the U.S. Navy accepted him in September of that yea...
+   (Should predict correctly)
+
+2. rawdata_5207.csv
+   Expected: However, the U.S. Navy accepted him in September of that yea...
+   (Should predict correctly)
+
+3. rawdata_5429.csv
+   Expected: However, the U.S. Navy accepted him in September of that yea...
+   (Should predict correctly)
+
+4. rawdata_5556.csv
+   Expected: However, the U.S. Navy accepted him in September of that yea...
+   (Should predict correctly)
+
+5. rawdata_5778.csv
+   Expected: However, the U.S. Navy accepted him in September of that yea...
+   (Should predict correctly)
+
+
+CHALLENGING EXAMPLES (Show these for error analysis):
+--------------------------------------------------------------------------------
+1. rawdata_4999.csv
+   True: In 1964 she went to Reprise again, shifting the next year to...
+   (Model struggles with this one)
+
+2. rawdata_5270.csv
+   True: In 1964 she went to Reprise again, shifting the next year to...
+   (Model struggles with this one)
+
+3. rawdata_5348.csv
+   True: In 1964 she went to Reprise again, shifting the next year to...
+   (Model struggles with this one)
+

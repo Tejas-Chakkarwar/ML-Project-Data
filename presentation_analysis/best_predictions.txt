@@ -1,0 +1,68 @@
+================================================================================
+TOP 10 BEST PREDICTIONS (For Demonstration)
+================================================================================
+
+[1] EXAMPLE 1: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5080.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[2] EXAMPLE 2: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5207.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[3] EXAMPLE 3: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5429.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[4] EXAMPLE 4: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5556.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[5] EXAMPLE 5: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5778.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[6] EXAMPLE 6: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_5905.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[7] EXAMPLE 7: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_6127.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+
+[8] EXAMPLE 8: ✓ CORRECT
+--------------------------------------------------------------------------------
+Raw Data File: rawdata_6254.csv
+True Sentence: However, the U.S. Navy accepted him in September of that year.
+Predicted: However, the U.S. Navy accepted him in September of that year.
+Word Accuracy: 100.0% (11/11)
+Result: PERFECT MATCH ✓
+

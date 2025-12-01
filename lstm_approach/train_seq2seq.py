@@ -378,7 +378,7 @@ def main():
 
     # Learning rate scheduler
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=3, verbose=True
+        optimizer, mode='min', factor=0.5, patience=3
     )
 
     # Training loop
@@ -438,7 +438,11 @@ def main():
             patience_counter += 1
 
         # Learning rate scheduling
+        old_lr = optimizer.param_groups[0]['lr']
         scheduler.step(val_loss)
+        new_lr = optimizer.param_groups[0]['lr']
+        if new_lr != old_lr:
+            print(f"  → Learning rate reduced: {old_lr:.6f} → {new_lr:.6f}")
 
         # Early stopping
         if not args.no_early_stop and patience_counter >= patience:
